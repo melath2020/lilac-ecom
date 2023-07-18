@@ -10,3 +10,16 @@ a{
   text-decoration: none;
   display: inline-block;
 }
+:root{
+  --color-3187ED:#3187ED;
+}
+
+/* header */
+
+.header-top-strip{
+  background-color: var(--color-3187ED);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  
+}
