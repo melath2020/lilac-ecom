@@ -16,6 +16,7 @@ a{
   --color-ecebebef:#fffffffb;
   --color-00C6D7:#00C6D7;
   --color-4D4D4D:#4d4d4dda;
+  --color-000000 :#000000
 }
 .gap-10{
   gap:10px;
@@ -96,7 +97,42 @@ a{
 
 /* footer-start */
 .footer-section{
-  background-color:var(--color-00C6D7);
-}
 
+  margin-top:0px ;
+  font-size: 14px;
+  color: var(--color-4D4D4D);
+}
+.footer-section img{
+  margin-left: -20px;
+  width:70%;
+}
+.footer-section h6{
+  margin-top: 30px;
+  color: var(--color-000000);
+}
+.footer-section .menu{
+  margin-top: 10px
+}
+.footer-section .contact-txt{
+  font-size: 14px;
+}
+.footer-section .micro img{
+  width: 80%;
+  margin-left: 10px;
+}
+.footer-section .txt-num{
+  font-size: 12px;
+}
+.footer-section .btn-light{
+  color: var(--color-3187ED);
+  border:1px solid var(--color-3187ED);
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.footer-section .app-dwld img{
+  margin-left: 5px;
+  margin-top: 20px;
+  width: 110%;
+}
 /* footer-ends */
