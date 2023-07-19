@@ -116,17 +116,19 @@ const Header = () => {
       <header className="header-bottom ">
         <div className="container">
           <div className="row">
-            <div className="col-12">
+            <div className="col-12 menu-text">
               <div class="d-flex flex-row mb-3">
                 <div class="p-2">All Categories </div>
-                <div class="p-2">Flex item 2</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
-                <div class="p-2">Flex item 3</div>
+                <div class="p-2 ms-3">Books</div>
+                <div class="p-2">Electronics</div>
+                <div class="p-2">Real estate</div>
+                <div class="p-2">Cars-bikes</div>
+                <div class="p-2">Dorm-furniture</div>
+                <div class="p-2">Men</div>
+                <div class="p-2">Women</div>
+                <div class="p-2">Music</div>
+                <div class="p-2">Toys</div>
+                <div class="p-2">Kids</div>
               </div>
             </div>
           </div>

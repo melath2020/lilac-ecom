@@ -12,10 +12,10 @@ a{
 }
 :root{
   --color-3187ED:#3187ED;
-  --color-83878b6e:#83878b6e;
+  --color-83878b6e:#83878b56;
   --color-ecebebef:#fffffffb;
   --color-00C6D7:#00C6D7;
-  --color-4D4D4D:#4D4D4D;
+  --color-4D4D4D:#4d4d4dda;
 }
 .gap-10{
   gap:10px;
@@ -32,7 +32,7 @@ a{
 .header-top-strip{
   background-color: var(--color-3187ED);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   
 }
@@ -70,5 +70,33 @@ a{
   font-weight: 700px;
   font-size: 14px;
 }
+.menu-text{
+  color: var(--color-4D4D4D);
+  font-size: 15px;
+}
 
+/* header ends */
 
+/* home start */
+
+.main-banner{
+  width: 100%;
+}
+.main-banner-content{
+  font-weight: 300;
+  width: 50%;
+  top: 51%;
+  font-size: 43px;
+  line-height: 43px;
+  left: 44%;
+  text-align: left;
+}
+
+/* home ends */
+
+/* footer-start */
+.footer-section{
+  background-color:var(--color-00C6D7);
+}
+
+/* footer-ends */
