@@ -1,7 +1,9 @@
 import React from "react";
 import Container from "../components/Container";
 import bannr from "../../src/images/Rectangle 9.png";
-import { Link } from "react-router-dom";
+import ProductCard from "../components/ProductCard";
+import emailvector from "../../src/images/Vector (1).png";
+import dotvector from "../../src/images/circleElement.png";
 
 const Home = () => {
   return (
@@ -33,9 +35,62 @@ const Home = () => {
         <div className="row">
          <div className="head-deal d-flex">
           <h6 >Best Deals</h6>
-          <h6 >View More</h6>
+          <h6 className="view-txt" >View More</h6>
+         </div>
+         <div className="row">
+         <div className="col-md-3 d-flex ">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+         
+         </div>
+
+         <div className="row mt-3">
+         <div className="col-md-3 d-flex ">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+          <div className="col-md-3 d-flex">
+            <ProductCard/>
+          </div>
+         
          </div>
          
+        </div>
+      </Container>
+
+
+      
+      <Container class1="home-wrapper-3 py-3">
+        <div className="row email-box">
+          <div className="col-md-2">
+            <img src={emailvector} alt="" srcset="" />
+          </div>
+          <div className="col-md-5">
+              <h4 className="text-white sign-up-txt">Sign Up for Newsletter <img src={dotvector} alt="" srcset="" className="dot-vector" /></h4>
+              <p className="mt-2 signup-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className="col-md-5">
+          <div className="input-group mb-3 mt-4">
+  <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+  <button type="button" class="btn btn-secondary btn-subscribe py-2">Subscribe</button>
+
+</div>
+<img src={dotvector} alt="" srcset="" className="dot-vector-2 text-end" />
+</div>
         </div>
       </Container>
     </>

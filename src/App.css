@@ -16,7 +16,8 @@ a{
   --color-ecebebef:#fffffffb;
   --color-00C6D7:#00C6D7;
   --color-4D4D4D:#4d4d4dda;
-  --color-000000 :#000000
+  --color-000000 :#000000;
+  ---color-FFFFFF:#FFFFFF
 }
 .gap-10{
   gap:10px;
@@ -143,4 +144,51 @@ a{
   justify-content: space-between;
   font-size: 14px;
 }
+.home-wrapper-2 .content-prdct{
+  margin-top: 3px;
+  font-size: 16px;
+  font-weight: 400px;
+}
+.home-wrapper-2 .content-prdct .price{
+  color: var(--color-3187ED);
+}
+.home-wrapper-2 .view-txt{
+  color: var(--color-3187ED);
+}
 /* home-wrapper-2  ends*/
+
+/* home-wrapper-3 start */
+.home-wrapper-3{
+  background-color: var(--color-3187ED);
+  padding-top: 10px;
+}
+.home-wrapper-3 .email-box{
+  padding: 20px;
+}
+.home-wrapper-3 .sign-up-txt{
+  font-weight: 700;
+}
+.home-wrapper-3 .signup-p{
+  font-size: 14px;
+  color: var(---color-FFFFFF);
+}
+.home-wrapper-3 .dot-vector{
+  margin-left: -15px;
+}
+.home-wrapper-3 .btn-subscribe{
+  border: 3px solid var(--color-ecebebef);
+  
+}
+.home-wrapper-3 .input-group{
+  padding: 10px;
+  margin-top: 20px;
+}
+.home-wrapper-3 .dot-vector-2{
+  display: block;
+  margin-top: -50px;
+  margin-left: 400px;
+}
+
+
+
+/* home-wrapper-3 ends */
