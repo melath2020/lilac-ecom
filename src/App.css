@@ -135,4 +135,12 @@ a{
   margin-top: 20px;
   width: 110%;
 }
+
 /* footer-ends */
+
+/* home-wrapper-2 */
+.home-wrapper-2 .head-deal{
+  justify-content: space-between;
+  font-size: 14px;
+}
+/* home-wrapper-2  ends*/

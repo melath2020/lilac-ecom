@@ -28,6 +28,16 @@ const Home = () => {
           </div>
         </div>
       </Container>
+
+      <Container class1="home-wrapper-2 py-3">
+        <div className="row">
+         <div className="head-deal d-flex">
+          <h6 >Best Deals</h6>
+          <h6 >View More</h6>
+         </div>
+         
+        </div>
+      </Container>
     </>
   );
 };
