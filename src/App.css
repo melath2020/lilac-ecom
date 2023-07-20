@@ -19,6 +19,20 @@ a{
   --color-000000 :#000000;
   ---color-FFFFFF:#ebe8e8;
   --color-f0ecec :#f0ecec;
+
+  --color-777777:#777777;
+  --color-f5f5f7: #f5f5f7;
+
+  --color-131921:#131921;
+  --color-3b4149:  #3b4149;
+  --color-febd69:#febd69;
+  --color-232f2e:#232f2e;
+  --color-bf4800:#bf4800;
+  --color-f5f5f7: #f5f5f7;
+  --color-ededed:#ededed;
+ 
+  --color-1c1c1b:#1c1c1b;
+  --color-f2f2f2:#f2f2f2;
 }
 .gap-10{
   gap:10px;
@@ -247,3 +261,56 @@ a{
  align-items: center;
 justify-content: center;
 }
+/* home-wrapper-4 ends */
+
+/*  auth card */
+
+.auth-card {
+  padding: 15px;
+  background-color: var(--color-00C6D7);
+  width:500px;
+  margin: 30px auto;
+  border-radius: 10px;
+}
+.auth-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--color-4D4D4Dlor);
+}
+.auth-card p {
+  font-size: 13px;
+  color: var(--color-83878b6e);
+}
+
+.auth-card .form-control {
+  height: 50px;
+  background-color: var(--color-f5f5f7);
+  color: var(--color-777777);
+  font-size: 14px;
+  border-radius: 10px;
+  border-color: transparent;
+}
+.auth-card a {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-1c1c1b);
+}
+.signup {
+  background-color: var(--color-3187ED);
+  color: var(---color-FFFFFF);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.login-btn{
+  background-color: var(---color-FFFFFF);
+  color: var(--color-232f2e);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+.signup:hover {
+  background-color: var(--color-131921);
+  color: white;
+}
+/*  auth card  ends*/
