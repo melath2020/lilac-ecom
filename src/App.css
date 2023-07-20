@@ -10,6 +10,10 @@ a{
   text-decoration: none;
   display: inline-block;
 }
+.error{
+  color: red;
+  font-size: 13px;
+}
 :root{
   --color-3187ED:#3187ED;
   --color-83878b6e:#83878b56;
@@ -267,7 +271,7 @@ justify-content: center;
 
 .auth-card {
   padding: 15px;
-  background-color: var(--color-00C6D7);
+  background-color: var(---color-FFFFFF);
   width:500px;
   margin: 30px auto;
   border-radius: 10px;
