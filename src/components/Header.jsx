@@ -103,7 +103,7 @@ const Header = () => {
             <div className="col-2 mt-4 text-end ">
               <AiOutlineHeart className="ms-3 text-dark-emphasis" />
               <GiBasket className="ms-3 text-dark-emphasis" />
-              <CgProfile className="ms-3 text-dark-emphasis" />
+              <Link to='profile'><CgProfile className="ms-3 text-dark-emphasis" /></Link>
             </div>
             <div className="col-2 mt-2 p-2 text-end">
               <button type="button" class=" btn-classifieds text-white ">

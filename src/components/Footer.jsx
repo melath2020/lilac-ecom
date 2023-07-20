@@ -24,8 +24,8 @@ const Footer = () => {
                 <p>Products</p>
                 <p>Classifieds</p>
                 <p>Contact us</p>
-                <p>Login</p>
-                <p>Signup</p>
+                <p> <Link to='/login'>Login</Link></p>
+                <p> <Link to='/signup'>Sign up</Link></p>
               </div>
             </div>
             <div className="col-md-2">
@@ -41,13 +41,13 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-2">
-              <h6>QUICK LINKS</h6>
+              <h6>VENDOR AREA</h6>
               <div className="menu">
-                <p>Products</p>
-                <p>Classifieds</p>
-                <p>Contact us</p>
-                <p> <Link to='/login'>Login</Link></p>
-                <p> <Link to='/signup'>Sign up</Link></p>
+                <p>Partner with us</p>
+                <p>Trainings</p>
+                <p>Procetures</p>
+                <p>Terms</p>
+                <p>Privacy and Policy</p>
               </div>
             </div>
             <div className="col-md-3">
