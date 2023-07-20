@@ -55,7 +55,8 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-2">
-              <img src={logo} alt="" srcset="" className="logo-main" />
+              <Link to='/'><img src={logo} alt="" srcset="" className="logo-main" /></Link>
+              
             </div>
             <div className="col-2">
               <div className="dropdown mt-4">

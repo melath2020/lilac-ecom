@@ -3,6 +3,7 @@ import logo from "../images/logo-6 1.png";
 import micro from "../images/Vector.png";
 import app from "../images/appStore.png";
 import google from "../images/googlePlay.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
@@ -45,8 +46,8 @@ const Footer = () => {
                 <p>Products</p>
                 <p>Classifieds</p>
                 <p>Contact us</p>
-                <p>Login</p>
-                <p>Signup</p>
+                <p> <Link to='/login'>Login</Link></p>
+                <p> <Link to='/signup'>Sign up</Link></p>
               </div>
             </div>
             <div className="col-md-3">
