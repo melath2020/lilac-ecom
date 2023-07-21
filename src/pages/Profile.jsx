@@ -1,10 +1,20 @@
 import React from "react";
 import Container from "../components/Container";
-import { FiEdit } from "react-icons/fi";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
+
 
 const Profile = () => {
+  const navigate=useNavigate()
   const authState=useSelector(state=>state?.auth)
+
+  const handleLogout=()=>{
+    localStorage.clear()
+    navigate('/login')
+    window.location.reload()
+  }
+
   return (
     <>
       <Container class1="cart-wrapper home-wrapper-2 py-5">
@@ -35,9 +45,13 @@ const Profile = () => {
 
 
                       <div class="buttons text-center">
-                        <button class="btn btn-outline-primary px-4">
-                         Logout
-                        </button>
+                      {authState?.user? <button onClick={handleLogout} class="btn btn-outline-primary px-4">
+                        Logout
+                         </button>:
+                         <button onClick={handleLogout} class="btn btn-outline-primary px-4">
+                         Login
+                          </button>
+                         }
                   
                       </div>
                     </div>
