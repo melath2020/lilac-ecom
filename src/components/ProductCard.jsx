@@ -1,14 +1,16 @@
 import React from 'react'
 import prdct from "../../src/images/placeholder.png";
 import ReactStars from "react-rating-stars-component";
+import { useNavigate } from 'react-router-dom';
 const ProductCard = (props) => {
+  const navigate = useNavigate();
   const { data } = props;
   return (
    <>
    {data?.map((item, index) => {
     
         return (
-          <div className="col-md-3 d-flex mt-2 "  key={index}>
+          <div className="col-md-3 d-flex mt-2 " onClick={() => navigate("/product/" + item?._id)}  key={index}>
           <div className="d-flex">
             <img
               src={prdct}
