@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "../components/Container";
 import bannr from "../../src/images/Rectangle 9.png";
 import ProductCard from "../components/ProductCard";
@@ -10,7 +10,19 @@ import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
+import { getAllProducts } from "../features/product/productSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 const Home = () => {
+  const productState = useSelector((state) => state?.product?.product);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+  const getProducts = () => {
+    dispatch(getAllProducts());
+  };
   return (
     <>
       <Container class1="home-wrapper-1 py-3">
@@ -43,34 +55,13 @@ const Home = () => {
             <h6 className="view-txt">View More</h6>
           </div>
           <div className="row">
-            <div className="col-md-3 d-flex ">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
+           
+              <ProductCard   data={productState ? productState : []}/>
+            
+            
           </div>
 
-          <div className="row mt-3">
-            <div className="col-md-3 d-flex ">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
-            <div className="col-md-3 d-flex">
-              <ProductCard />
-            </div>
-          </div>
+         
         </div>
       </Container>
 
@@ -131,10 +122,10 @@ const Home = () => {
             <div className="arrows  ">
               <div className="arw-icon d-flex">
                 <div className="arrow-left text-center">
-                  <BsFillArrowLeftCircleFill className="p-1"/>
+                  <BsFillArrowLeftCircleFill className="p-1" />
                 </div>
                 <div className="arrow-right text-center ">
-                  <BsFillArrowRightCircleFill className="p-1"/>
+                  <BsFillArrowRightCircleFill className="p-1" />
                 </div>
               </div>
             </div>
