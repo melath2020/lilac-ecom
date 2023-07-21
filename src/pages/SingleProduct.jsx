@@ -11,11 +11,14 @@ import { useEffect } from 'react';
 import {  getAProduct, getAllProducts } from '../features/product/productSlice';
 import { toast } from 'react-toastify';
 import prdct from "../../src/images/placeholder.png";
+import { addProdToCart } from '../features/user/userSlice';
 
 
 
 const SingleProduct = () => {
+    const [quantity,setQuantity]=useState(1)
     const location=useLocation()
+    const naviate=useNavigate()
     const getProductId=location.pathname.split("/")[2]
     const dispatch=useDispatch()
     const productState=useSelector(state=>state.product?.singleproduct)
@@ -24,7 +27,17 @@ const SingleProduct = () => {
         dispatch(getAProduct(getProductId)) 
     },[])
 
-
+    const uploadCart=()=>{
+       
+        if(quantity===null){
+            toast.error("Please Choose Quantity")
+            return false
+        }else{
+            dispatch(addProdToCart({productId:productState?._id,quantity,price:productState?.price}))
+            naviate('/cart')
+            
+        }
+    }
    
     
    
@@ -120,7 +133,8 @@ const SingleProduct = () => {
                                         <h3 className="product-heading">
                                         Quantity :</h3>
                                     <div className=''>
-                                        <input type="number" name="" min={1} max={10} step={{ width: "70px" }} className="form-control" id=""  />
+                                        <input type="number" name="" min={1} max={10} step={{ width: "70px" }} className="form-control" id="" 
+                                        onChange={(e)=>{setQuantity(e.target.value)}} value={quantity} />
                                     </div>
                                     
 
@@ -150,7 +164,7 @@ const SingleProduct = () => {
                                
                                 <div className="ms-5d-flex align-items-center gap-30 ms-5">
                                         
-                                         <button className='button signup'>Added to Cart</button>
+                                         <button className='button signup ' onClick={uploadCart}>Add to Cart</button>
                                      </div>
                             </div>
 

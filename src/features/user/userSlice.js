@@ -18,6 +18,23 @@ export const loginUser=createAsyncThunk("auth/login",async (userData,thunkAPI)=>
     }
 })
 
+export const addProdToCart=createAsyncThunk("user/cart/add",async (cartData,thunkAPI)=>{
+    console.log(cartData)
+    try{
+        return await authService.addToCart(cartData)
+    }catch(errors){
+        return thunkAPI.rejectWithValue(errors)
+    }
+})
+
+export const getUserCart=createAsyncThunk("user/cart/get",async (thunkAPI)=>{
+    try{
+        return await authService.getCart()
+    }catch(errors){
+        return thunkAPI.rejectWithValue(errors)
+    }
+})
+
 const getCustomerfromLocalStorage=localStorage.getItem('customer')? JSON.parse(localStorage.getItem('customer')):null;
 const initialState={
     user:getCustomerfromLocalStorage,
@@ -71,6 +88,39 @@ export const authSlice=createSlice({
             if(state.isError===true){
                 toast.error(action.payload.response.data.message)
             }
+        }).addCase(addProdToCart.pending,(state)=>{
+            state.isLoading=true;
+           
+        }).addCase(addProdToCart.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.isError=false;
+            state.isSuccess=true;
+            state.cartProduct=action.payload;
+            if(state.isSuccess){
+                toast.success("Product Added to Cart")
+            }
+           
+        }).addCase(addProdToCart.rejected,(state,action)=>{
+            state.isLoading=false;
+            state.isError=true;
+            state.isSuccess=false;
+            state.message=action.error;
+            
+        }).addCase(getUserCart.pending,(state)=>{
+            state.isLoading=true;
+           
+        }).addCase(getUserCart.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.isError=false;
+            state.isSuccess=true;
+            state.cartProducts=action.payload;
+           
+        }).addCase(getUserCart.rejected,(state,action)=>{
+            state.isLoading=false;
+            state.isError=true;
+            state.isSuccess=false;
+            state.message=action.error;
+            
         })
     }
 })
