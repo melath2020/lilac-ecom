@@ -41,7 +41,7 @@ const removeProductFromCart=async(cartItemId)=>{
 }
 
 const updateProductFromCart=async(cartDetail)=>{
-    const responce=await axios.put(`${base_url}user/update-product-cart/${cartDetail.cartItemId}/${cartDetail.quantity}`,config);
+    const responce=await axios.delete(`${base_url}user/update-product-cart/${cartDetail.cartItemId}/${cartDetail.quantity}`,config);
     if(responce.data){
         return responce.data
     }
