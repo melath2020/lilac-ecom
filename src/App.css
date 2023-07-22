@@ -177,6 +177,10 @@ a{
 .prd-crd{
   cursor: pointer;
 }
+a{
+  text-decoration: none;
+  color: var(--color-777777);
+}
 
 /* home-wrapper-2  ends*/
 
