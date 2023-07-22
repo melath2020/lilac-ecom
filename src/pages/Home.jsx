@@ -12,6 +12,7 @@ import {
 } from "react-icons/bs";
 import { getAllProducts } from "../features/product/productSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { getUserCart } from "../features/user/userSlice";
 
 const Home = () => {
   const productState = useSelector((state) => state?.product?.product);
@@ -23,6 +24,10 @@ const Home = () => {
   const getProducts = () => {
     dispatch(getAllProducts());
   };
+
+  useEffect(() => {
+    dispatch(getUserCart());
+  }, []);
   return (
     <>
       <Container class1="home-wrapper-1 py-3">

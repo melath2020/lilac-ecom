@@ -4,10 +4,14 @@ import { IoIosCall, IoMdArrowDropdown } from "react-icons/io";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { BiSearchAlt2 } from "react-icons/bi";
 import { AiOutlineHeart } from "react-icons/ai";
-import { GiBasket } from "react-icons/gi";
 import { CgProfile } from "react-icons/cg";
+import { BsFillBagCheckFill } from 'react-icons/bs';
 import logo from "../images/logo-6 1.png";
+import { useDispatch, useSelector } from "react-redux";
+
 const Header = () => {
+  const dispatch=useDispatch();
+  const cartState=useSelector(state=>state?.auth?.cartProducts)
   return (
     <>
       <header className="header-top-strip pt-2">
@@ -102,7 +106,12 @@ const Header = () => {
             </div>
             <div className="col-2 mt-4 text-end ">
               <AiOutlineHeart className="ms-3 text-dark-emphasis" />
-              <GiBasket className="ms-3 text-dark-emphasis" />
+              <i class="bi bi-bag-x"></i>
+              <Link to='cart'><BsFillBagCheckFill  className="ms-3 text-dark-emphasis " /> </Link> &nbsp;
+              {cartState && <span class="badge text-bg-info text-white mt-2">{cartState?.length?cartState.length:0}</span>}
+            
+             
+              
               <Link to='profile'><CgProfile className="ms-3 text-dark-emphasis" /></Link>
             </div>
             <div className="col-2 mt-2 p-2 text-end">
