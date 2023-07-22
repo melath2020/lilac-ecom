@@ -442,6 +442,12 @@ margin-bottom: 0px;
   .hide{
     display: none;
   }
+  .main-banner-content{
+    top: 180px;
+    font-size: 14px;
+    
+    line-height: 20px;
+  }
 
   
 }
@@ -458,11 +464,27 @@ margin-bottom: 0px;
   .hide{
     display: none;
   }
+  .main-banner-content{
+ 
+      top: 180px;
+      font-size: 20px;
+    
+      line-height: 20px;
+   
+  }
 
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .main-banner-content{
+ 
+    top: 200px;
+    font-size: 28px;
+  
+    line-height: 25px;
+ 
+}
 
 }
 
