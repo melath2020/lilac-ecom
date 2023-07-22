@@ -10,8 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import {  getAProduct, getAllProducts } from '../features/product/productSlice';
 import { toast } from 'react-toastify';
-import prdct from "../../src/images/placeholder.png";
-import { addProdToCart } from '../features/user/userSlice';
+import { addProdToCart, getUserCart } from '../features/user/userSlice';
 
 
 
@@ -19,12 +18,25 @@ const SingleProduct = () => {
     const [quantity,setQuantity]=useState(1)
     const location=useLocation()
     const naviate=useNavigate()
+    const [alreadyAdded,setAlreadyAdded]=useState(false)
     const getProductId=location.pathname.split("/")[2]
     const dispatch=useDispatch()
     const productState=useSelector(state=>state.product?.singleproduct)
+    const cartState=useSelector(state=>state?.auth?.cartProducts)
 
     useEffect(()=>{
         dispatch(getAProduct(getProductId)) 
+        dispatch(getUserCart())
+    },[])
+
+    useEffect(()=>{
+        for (let index = 0; index < cartState?.length; index++) {
+            if(getProductId===cartState[index]?.productId?._id){
+                setAlreadyAdded(true)
+
+            }
+
+        }
     },[])
 
     const uploadCart=()=>{
@@ -130,12 +142,13 @@ const SingleProduct = () => {
 
                                 <div className='d-flex align-items-center gap-15 flex-row  mb-3 mt-2'>
                                   
+                                {alreadyAdded === false && <>
                                         <h3 className="product-heading">
                                         Quantity :</h3>
                                     <div className=''>
-                                        <input type="number" name="" min={1} max={10} step={{ width: "70px" }} className="form-control" id="" 
-                                        onChange={(e)=>{setQuantity(e.target.value)}} value={quantity} />
+                                        <input type="number" name="" min={1} max={10} step={{ width: "70px" }} className="form-control" id=""  onChange={(e)=>{setQuantity(e.target.value)}} value={quantity}/>
                                     </div>
+                                    </>}
                                     
 
                                     
@@ -164,7 +177,7 @@ const SingleProduct = () => {
                                
                                 <div className="ms-5d-flex align-items-center gap-30 ms-5">
                                         
-                                         <button className='button signup ' onClick={uploadCart}>Add to Cart</button>
+                                <button className='button border-0 signup' onClick={()=>{alreadyAdded? naviate('/cart'):uploadCart()}}>{alreadyAdded ? "Go to Cart" :"Add to cart" }</button>
                                      </div>
                             </div>
 
