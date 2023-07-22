@@ -59,7 +59,7 @@ const Home = () => {
             <h6>Best Deals</h6>
             <h6 className="view-txt">View More</h6>
           </div>
-          <div className="row mob-cntre">
+          <div className="row crd-align ">
            
               <ProductCard   data={productState ? productState : []}/>
             

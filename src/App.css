@@ -450,21 +450,31 @@ margin-bottom: 0px;
 .logo-main{
   width: 140px;
 }
-.mob-cntre{
-align-items: center;
-justify-content: center;
-}
+
+
 
 /* 
 main-banner-content */ 
 .main-banner-content{
-  line-height: 15px;
+  line-height: 17px;
   font-size: 15px;
-  top: 160px;
+  top: 140px;
   
 }
 .marg{
   margin-top: 30px;
 }
+.crd-align{
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-left: 10%;
+  }
+
+  .app-dwld{
+    width: 90%;
+  }
 
 }
+
+
