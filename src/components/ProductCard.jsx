@@ -10,7 +10,7 @@ const ProductCard = (props) => {
    {data?.map((item, index) => {
     
         return (
-          <div className="col-md-3 d-flex mt-2 " onClick={() => navigate("/product/" + item?._id)}  key={index}>
+          <div className="col-md-3 d-flex mt-2 prd-crd" onClick={() => navigate("/product/" + item?._id)}  key={index}>
           <div className="d-flex">
             <img
               src={prdct}
