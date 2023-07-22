@@ -53,13 +53,13 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="home-wrapper-2 py-3">
+      <Container class1="home-wrapper-2 py-3 ">
         <div className="row">
           <div className="head-deal d-flex">
             <h6>Best Deals</h6>
             <h6 className="view-txt">View More</h6>
           </div>
-          <div className="row">
+          <div className="row mob-cntre">
            
               <ProductCard   data={productState ? productState : []}/>
             
@@ -140,13 +140,13 @@ const Home = () => {
               </button>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 marg">
             <ClsfdsProduct />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 marg">
             <ClsfdsProduct />
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 marg">
             <ClsfdsProduct />
           </div>
         </div>

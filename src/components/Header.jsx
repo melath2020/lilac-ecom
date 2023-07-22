@@ -104,7 +104,7 @@ const Header = () => {
                 </span>
               </div>
             </div>
-            <div className="col-2 mt-4 text-end ">
+            <div className="col-2 mt-4 text-end icons-head">
               <AiOutlineHeart className="ms-3 text-dark-emphasis" />
               <i class="bi bi-bag-x"></i>
               <Link to='cart'><BsFillBagCheckFill  className="ms-3 text-dark-emphasis " /> </Link> &nbsp;

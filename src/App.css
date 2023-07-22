@@ -427,3 +427,44 @@ margin-bottom: 0px;
 /* Cart Page Ends here */
 
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+.main-row{
+  display: none;
+}
+.header-upper .dropdown{
+  display: none;
+}
+.header-upper .input-group{
+  display: none;
+}
+.header-upper .input-group{
+  display: none;
+}
+.header-upper .icons-head{
+  display: none;
+}
+.header-bottom{
+  display: none;
+}
+.logo-main{
+  width: 140px;
+}
+.mob-cntre{
+align-items: center;
+justify-content: center;
+}
+
+/* 
+main-banner-content */ 
+.main-banner-content{
+  line-height: 15px;
+  font-size: 15px;
+  top: 160px;
+  
+}
+.marg{
+  margin-top: 30px;
+}
+
+}
