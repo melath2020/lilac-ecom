@@ -8,6 +8,8 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import SingleProduct from './pages/SingleProduct';
 import Cart from './pages/Cart';
+import { PrivateRoute } from './routing/PrivateRoute';
+import { OpenRoute } from './routing/OpenRoute';
 
 function App() {
   return (
@@ -16,11 +18,11 @@ function App() {
   <Routes>
     <Route path='/' element={<Layout/>}>
       <Route index element={<Home/>}/>
-      <Route path='profile' element={<Profile/>}/>
-      <Route path='login' element={<Login/>}/>
-      <Route path='signup' element={<Signup/>}/>
+      <Route path='profile' element={<PrivateRoute><Profile/></PrivateRoute>}/>
+      <Route path='login' element={<OpenRoute><Login/></OpenRoute>}/>
+      <Route path='signup' element={<OpenRoute><Signup/></OpenRoute>}/>
       <Route path='product/:id' element={<SingleProduct/>}/>
-      <Route path="cart" element={<Cart />} />
+      <Route path="cart" element={<PrivateRoute><Cart /></PrivateRoute>} />
     </Route>
   </Routes>
   </BrowserRouter>
