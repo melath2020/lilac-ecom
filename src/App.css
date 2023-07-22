@@ -180,7 +180,9 @@ a{
 a{
   text-decoration: none;
   color: var(--color-777777);
+  cursor: pointer;
 }
+
 
 /* home-wrapper-2  ends*/
 
