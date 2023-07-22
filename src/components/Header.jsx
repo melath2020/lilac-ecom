@@ -62,7 +62,7 @@ const Header = () => {
               <Link to='/'><img src={logo} alt="" srcset="" className="logo-main" /></Link>
               
             </div>
-            <div className="col-2 hide">
+            <div className="col-2 ">
               <div className="dropdown mt-4">
                 <button
                   className="btn btn-clsfds-drpdwn dropdown-toggle "
@@ -91,7 +91,7 @@ const Header = () => {
               </div>
             </div>
             <div className="col-4">
-              <div class="input-group mb-3 mt-4 hide">
+              <div class="input-group mb-3 mt-4 ">
                 <input
                   type="text"
                   className="form-control"
@@ -104,7 +104,7 @@ const Header = () => {
                 </span>
               </div>
             </div>
-            <div className="col-2 mt-4 text-end hide">
+            <div className="col-2 mt-4 text-end ">
               <AiOutlineHeart className="ms-3 text-dark-emphasis" />
               <i class="bi bi-bag-x"></i>
               <Link to='cart'><BsFillBagCheckFill  className="ms-3 text-dark-emphasis " /> </Link> &nbsp;
@@ -114,7 +114,7 @@ const Header = () => {
               
               <Link to='profile'><CgProfile className="ms-3 text-dark-emphasis" /></Link>
             </div>
-            <div className="col-2 mt-2 p-2 text-end hide">
+            <div className="col-2 mt-2 p-2 text-end ">
               <button type="button" class=" btn-classifieds text-white ">
                 Classifieds
               </button>
@@ -123,7 +123,7 @@ const Header = () => {
         </div>
       </header>
 
-      <header className="header-bottom hide">
+      <header className="header-bottom ">
         <div className="container">
           <div className="row">
             <div className="col-12 menu-text">
