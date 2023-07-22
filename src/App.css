@@ -425,3 +425,53 @@ margin-bottom: 0px;
   color: var(--color-1c1c1b);
 }
 /* Cart Page Ends here */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main-row{
+   
+    display: none;
+  }
+  .header-upper .logo-main{
+    width: 200px;
+  }
+  .clsfds-sctn{
+    display: none;
+  }
+  .hide{
+    display: none;
+  }
+
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .main-row{
+   
+    display: none;
+  }
+  .header-upper .logo-main{
+    width: 200px;
+  }
+  .hide{
+    display: none;
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
